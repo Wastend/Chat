@@ -1,8 +1,14 @@
 import React from 'react';
+import Header from '../header/Header.jsx'
+import Footer from '../footer/Footer'
 
 function PageWrapper(props) {
     return (
-        <>{props.children}</>
+        <>
+        <Header></Header>
+        {props.children}
+        <Footer></Footer>
+        </>
     );
 }
 
