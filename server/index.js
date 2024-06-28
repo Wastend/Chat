@@ -1,5 +1,3 @@
-
-
 import express from 'express';
 import Api from './api.js';
 
@@ -7,7 +5,7 @@ const myApi = new Api()
 
 const app = express();
 
-app.get('/api', async(req, res) => {
+app.get('/all-chanels', async(req, res) => {
     const data = await myApi.getAllChanels()
   res.json(data);
 });

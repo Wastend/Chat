@@ -1,23 +1,24 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { getChanels } from '../../scripts/api';
+import Chanels from './Chanels';
 
 function HomePage(props) {
 
-    const [data, setData] = useState ([{}])
+    const [chanels, setChanels] = useState ([])
 
     useEffect(() => {
         async function fetchData() {
             const data = await getChanels();
-            setData(data)
+            setChanels(data)
           }
           fetchData();
       }, []); 
 
     return (
-        <div>
-            <Link to='/test'>test</Link>
-        </div>
+        <main>
+            <Chanels chanels={chanels} />            
+        </main>
     );
 }
 
