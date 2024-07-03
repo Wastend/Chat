@@ -72,7 +72,7 @@ summary {
     font-weight: 600;
     line-height: 28px;
     vertical-align: baseline;
-    font-family: 'NotoSansKR', sans-serif;
+    font-family: sans-serif;
     transition: 0.6s;
 }
 
@@ -165,15 +165,32 @@ a {
     padding: 0;
     font-size: 100%;
     vertical-align: baseline;
+    position: relative;
     background: transparent;
     text-decoration: none;
     cursor: pointer;
     color: var(--color-white);
 }
 
+a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    bottom: 0px;
+    left: 0;
+    background-color: var(--color-white-dark);
+    width: 0;
+    transition: .6s;
+}
+
 a:hover,
 a:active {
-    color: var(--color-blue-light);
+    color: var(--color-white-dark);
+}
+
+a:hover::after,
+a:active::after {
+    width: 100%;
 }
 
 del {
@@ -373,8 +390,14 @@ hr {
     color: var(--color-gray-hr);
 }
 
-ol {
+ol, ul {
     list-style-type: none;
+}
+
+abbr[title], dfn[title] {
+    cursor: auto;
+    border: none;
+    text-decoration: none;
 }
 
 @media(max-width: 1200px) {

@@ -1,0 +1,44 @@
+.chanels-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.chanel-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.chanel-list>li {
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    width: calc(50% - 10px);
+    background-image: url('../../source/background-chanel.jpg');
+    padding: 40px;
+}
+
+.chanel-list>li h4,
+.chanel-list>li p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    color: white;
+    overflow: hidden;
+}
+
+.chanel-list>li h4 {
+    -webkit-line-clamp: 1;
+}
+
+.chanel-list>li p {
+    -webkit-line-clamp: 2;
+}
+
+.chanel-list>li a {
+    width: fit-content;
+    align-self: flex-end;
+    margin-top: 30px;
+}

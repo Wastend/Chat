@@ -1,0 +1,25 @@
+header {
+    padding: 20px 0;
+}
+
+.header-logo {
+    display: flex;
+}
+
+.header-logo h1 {
+    font-size: 1px;
+    line-height: 1px;
+    width: 1px;
+    height: 1px;
+    margin-left: -1px;
+}
+
+.header-logo path {
+    fill: #48024E;
+    transition: .6s;
+}
+
+.header-logo:hover path,
+.header-logo:active path{
+    fill: #74047d;
+}
