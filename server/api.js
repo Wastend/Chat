@@ -20,12 +20,18 @@ export default class Api {
     }
 
     async getChanels (count, offset) {
-        const [rows] = await this.pool.query("SELECT * FROM Chanel ORDER BY date_create DESC LIMIT ? OFFSET ?", [count, offset]);
+
+        const [test] = await this.pool.query("SELECT t1.*, (SELECT COUNT(*) FROM Chanel_users WHERE Chanel_users.chanel_id = t1.id) AS users FROM Chanel AS t1 ORDER BY t1.date_create DESC limit ? OFFSET ?;", [count, offset])
         
-        return rows
+        return test
     }
 
     async getUsersCountChanels () {
+        const [rows] = await this.pool.query("select * from Chanel");
+        return rows
+    }
+
+    async addChanelUser () {
         const [rows] = await this.pool.query("select * from Chanel");
         return rows
     }

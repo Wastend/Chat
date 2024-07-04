@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 
 function Chanel(props) {
 
     const [messages, setMessages] = useState([]);
     const socket = useRef()
-    const [user, setUser] = useState({name:'myname', id:Date.now()})
+    const [user] = useState({name:'myname', id:Date.now()})
     const chanelId = window.location.href.split('chanel/')[1]
 
     function connect() {
@@ -36,9 +36,9 @@ function Chanel(props) {
         }
     }
 
-    useEffect(() => {
+    // useEffect(() => {
         connect()
-    }, [])
+    // }, [connect])
 
     window.onunload = function(){
         const message = {

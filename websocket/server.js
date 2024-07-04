@@ -29,7 +29,6 @@ wss.on('connection', function connection(ws) {
 
 function broadcastMessageChanel(message, NewUser, needSend) {
     wss.clients.forEach(client => {
-        console.log(message.chanel);
         const [userId] = users.filter(user => (user.ws === client && user.chanel === message.chanelId))
         if (
             client.readyState === ws.OPEN && 

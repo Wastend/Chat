@@ -1,0 +1,13 @@
+.icon {
+    display: block;
+    font-family: 'FontAwesome';
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+
+.icon-user::before {
+    content: '\f21b';
+    color: white;
+}

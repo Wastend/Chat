@@ -9,24 +9,24 @@ function HomePage(props) {
     const [currentPagination, setCurrentPagination] = useState(0)
     const countProducts = 10
 
-    
+    console.log(chanels);
 
     useEffect(() => {
         async function fetchData() {
             const count = await getCountChanels()
-            if(count) {
+            if (count) {
                 setCurrentPagination(1)
-                if(count/countProducts > 1)
+                if (count / countProducts > 1)
                     setChanels(await getChanels(countProducts, 0))
             }
-            setPaginationCount(count/countProducts)
+            setPaginationCount(count / countProducts)
         }
         fetchData();
     }, []);
 
     return (
         <main>
-            <Chanels chanels={chanels} paginationCount={paginationCount} countProducts={countProducts} currentPagination={currentPagination}/>
+            <Chanels chanels={chanels} paginationCount={paginationCount} countProducts={countProducts} currentPagination={currentPagination} />
         </main>
     );
 }

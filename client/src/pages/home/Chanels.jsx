@@ -14,15 +14,23 @@ function Chanels(props) {
                             <ul className="chanel-list">
                                 {chanels.map(row => (
                                     <li key={row.id}>
-                                        <abbr title={row.title}>
-                                            <h4 data-title={row.title}>
-                                                {row.title}
-                                            </h4>
-                                        </abbr>
-                                        <abbr title={row.description}>
-                                            <p>{row.description}</p>
-                                        </abbr>
-                                        <Link to={`chanel/${row.id}`}>Join</Link>
+                                        <div className='chanel-top'>
+                                            <abbr title={row.title}>
+                                                <h4 data-title={row.title}>
+                                                    {row.title}
+                                                </h4>
+                                            </abbr>
+                                            <abbr title={row.description}>
+                                                <p>{row.description}</p>
+                                            </abbr>
+                                        </div>
+                                        <div className="chanel-bottom">
+                                            <div className="chanel-users">
+                                                <div className='icon icon-user'></div>
+                                                <sup>{row.users}</sup>
+                                            </div>
+                                            <Link to={`chanel/${row.id}`}>Join</Link>
+                                        </div>
                                     </li>
                                 ))}
                             </ul>

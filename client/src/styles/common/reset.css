@@ -304,13 +304,13 @@ img {
 
 sub,
 sup {
-    font-size: 75%;
+    font-size: 85%;
     line-height: 0;
     position: relative;
 }
 
 sup {
-    top: -0.5em;
+    top: 0.5em;
 }
 
 sub {

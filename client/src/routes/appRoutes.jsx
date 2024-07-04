@@ -8,18 +8,18 @@ const appRoutes = [
     path: '/',
     index: true,
     element: <HomePage/>,
-    state: "home"
+    title:"WChat",
   },
   {
     path: '/chanel/*',
     index: true,
     element: <ChanelPage/>,
-    state: "home"
+    title: "Chanel",
   },
   {
     path: '*',
     element: <NotFound/>,
-    state: "not-found"
+    title:"Page not founded",
   }
 ]
 
