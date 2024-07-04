@@ -4,7 +4,6 @@ export const getChanels = async (count, offset) => {
     params.append('offset', offset);
     const response = await fetch(`/all-chanels?${params}`);
     const data = await response.json();
-    console.log(data);
 
     return data;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Chanels.css'
+import { Link } from 'react-router-dom';
 
 function Chanels(props) {
     const chanels = props.chanels
@@ -21,7 +22,7 @@ function Chanels(props) {
                                         <abbr title={row.description}>
                                             <p>{row.description}</p>
                                         </abbr>
-                                        <a href={`chanel/${row.id}`}>Join</a>
+                                        <Link to={`chanel/${row.id}`}>Join</Link>
                                     </li>
                                 ))}
                             </ul>
