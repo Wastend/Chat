@@ -9,8 +9,6 @@ function HomePage(props) {
     const [currentPagination, setCurrentPagination] = useState(0)
     const countProducts = 10
 
-    console.log(chanels);
-
     useEffect(() => {
         async function fetchData() {
             const count = await getCountChanels()

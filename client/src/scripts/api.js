@@ -16,3 +16,33 @@ export const getCountChanels = async () => {
 
     return data
 }
+
+export const authHandle = async (name, password) => {
+    const reqData = {name, password}
+    
+    const response = await fetch(`/auth`,{
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(reqData)
+      });
+
+    return response.status === 200 ? true : false
+}
+
+export const registerHandle = async (name, password) => {
+    const reqData = {name, password}
+    
+    const response = await fetch(`/register`,{
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(reqData)
+      });
+
+    return response.status === 200 ? true : false
+}
