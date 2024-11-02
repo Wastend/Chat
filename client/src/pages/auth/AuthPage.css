@@ -1,0 +1,30 @@
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-page {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.auth-page form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px 40px 40px;
+  border-radius: 25px;
+  background: url('../../assets/img/fon.jpg');
+  max-width: 450px;
+}
+
+.auth-page form * {
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.auth-page form input {
+  color: #5b5b5b;
+}
